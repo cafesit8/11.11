@@ -1,0 +1,111 @@
+@charset "UTF-8";
+@import '../node_modules/animate.css/animate.css';
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Rubik:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.section1 {
+  background-color: rgb(248, 162, 63);
+  background-image: url("../recursos/Diseño sin título.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.section1 h1 {
+  text-align: center;
+  position: absolute;
+  top: 50px;
+  color: #fff;
+  font-size: 6em;
+  font-family: "Great Vibes", cursive;
+  letter-spacing: 5px;
+}
+@media (max-width: 1075px) {
+  .section1 h1 {
+    font-size: 3em;
+    letter-spacing: 0;
+  }
+}
+.section1 .gatito-1 {
+  width: 15em;
+  position: absolute;
+  left: 5em;
+}
+@media (max-width: 1075px) {
+  .section1 .gatito-1 {
+    width: 7em;
+    left: 0.5em;
+    top: 25%;
+  }
+}
+.section1 .gatito-2 {
+  width: 15em;
+  position: absolute;
+  bottom: 0;
+  width: 15em;
+}
+@media (max-width: 1075px) {
+  .section1 .gatito-2 {
+    width: 7em;
+    bottom: 0;
+    width: 10em;
+  }
+}
+.section1 .gatito-3 {
+  width: 15em;
+  position: absolute;
+  right: 5em;
+}
+@media (max-width: 1075px) {
+  .section1 .gatito-3 {
+    width: 7em;
+    right: 0;
+    bottom: 25%;
+  }
+}
+.section1::before {
+  content: "";
+  background: linear-gradient(180deg, rgba(9, 9, 121, 0) 30%, rgb(255, 66, 14) 100%);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.section1__article {
+  width: 60em;
+  height: 40em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  z-index: 5;
+}
+.section1__11 {
+  border: solid #fff;
+  width: 2.6em;
+  height: 2.6em;
+  font-size: 10em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rubik", sans-serif;
+}
+@media (max-width: 1075px) {
+  .section1__11 {
+    width: 2.6em;
+    height: 2.6em;
+    font-size: 5em;
+  }
+}
+
+/*# sourceMappingURL=section1.css.map */

@@ -1,0 +1,27 @@
+
+@mixin flex ($justify, $align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin width ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin bg ($color, $url, $repeat, $size){
+    background-color: $color;
+    background-image: $url;
+    background-repeat: $repeat;
+    background-size: $size;
+}
+
+@mixin absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}

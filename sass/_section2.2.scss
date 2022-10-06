@@ -1,0 +1,167 @@
+@use "mixins" as *;
+
+.section2 {
+  @include width(100%, 100vh);
+  background-position: center;
+  @include bg(#ff420e, url("../recursos/hug.png"), no-repeat, auto);
+  background-size: 50%;
+  overflow: hidden;
+  position: relative;
+  @include flex(center, center);
+
+  &__img{
+    position: absolute;
+    bottom: 30px;
+    width: 10em;
+    left: 30px;
+    z-index: 1;
+    @media (max-width: 500px) {
+      display: none;
+    }
+  }
+  &__img2{
+    position: absolute;
+    top: 30px;
+    width: 10em;
+    right: 30px;
+    z-index: 1;
+    @media (max-width: 500px) {
+      display: none;
+    }
+  }
+
+  &__content {
+    display: flex;
+    @include flex(space-between, center);
+    flex-wrap: wrap;
+    @include width(70%, 25em);
+
+    @media (max-width: 900px) {
+      @include width(80%, 30em);
+      flex-direction: column;
+    }
+  }
+
+  &__texto{
+    text-align: center;
+    border: none;
+    color: white;
+    text-shadow: 0 0 5px #000000,
+    0 0 5px #000000;
+    font-family: "Rubik", sans-serif;
+  }
+
+  &__imgcontent {
+    @include width(30%, 100%);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      cursor: pointer;
+    }
+
+    @media (max-width: 900px) {
+      @include width(10em, 10em);
+      flex-direction: column;
+    }
+  }
+
+  &__article {
+    display: none;
+    @include bg(transparent, url('../recursos/Me.png'), no-repeat, contain);
+    @include width(100%, 100vh);
+    background-color: rgba(0, 0, 0, 0.35);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    @media (max-width: 900px) {
+      background-size: 40%;
+    }
+
+    &__msg {
+      @include absolute;
+      @include width(50%, 50%);
+      @include flex(center, center);
+      flex-direction: column;
+      padding: 50px;
+      background-color: white;
+      border-radius: 20px;
+      font-size: 16px;
+      gap: 10px;
+      font-family: "Rubik", sans-serif;
+      text-align: center;
+
+      h3 {
+        font-size: 20px;
+        @media (max-width: 900px) {
+          font-size: 18px;
+        }
+      }
+
+      &__close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 35px;
+        cursor: pointer;
+      }
+
+      @media (max-width: 900px) {
+        @include width(90%, 65%);
+        font-size: 15px;
+        padding: 10px;
+      }
+    }
+  }
+  &__article.active {
+    display: block;
+  }
+  &__articleVideo {
+    @include bg(transparent, url('../recursos/she.png'), no-repeat, contain);
+    display: none;
+    @include width(100%, 100vh);
+    background-position: right;
+    background-color: rgba(0, 0, 0, 0.35);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
+    &__video {
+      @include absolute;
+      @include width(50%, 50%);
+      @include flex(center, center);
+      padding: 50px;
+      background-color: white;
+      border-radius: 20px;
+
+      &__closeVideo {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 35px;
+        cursor: pointer;
+      }
+      @media (max-width: 900px) {
+        @include width(90%, 50%);
+        font-size: 15px;
+      }
+    }
+    @media (max-width: 900px) {
+      background-size: 30%;
+      background-position: top right;
+    }
+  }
+  &__articleVideo.active{
+    display: block;
+  }
+   .video{
+    width: 100%;
+    height: 100%;
+    @media (max-width: 900px) {
+      @include width(20em, 70%);
+    }
+   }
+}
