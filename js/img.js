@@ -11,6 +11,7 @@ openLetter.addEventListener('click', ()=>{
     articleLetter.classList.add('animate__fadeInDown')
 })
 closeLetter.addEventListener('click', ()=>{
+    articleLetter.classList.remove('active')
     articleLetter.classList.remove('animate__fadeInDown')
     articleLetter.classList.add('animate__fadeOutDown')
 })
@@ -22,6 +23,7 @@ openVideo.addEventListener('click', ()=>{
 })
 
 closeVideo.addEventListener('click', ()=>{
+    articleVideo.classList.remove('active')
     articleVideo.classList.remove('animate__fadeInUp')
     articleVideo.classList.add('animate__fadeOutUp')
 })
